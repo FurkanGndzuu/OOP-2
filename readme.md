@@ -7,14 +7,15 @@ Production URL: http://51.44.174.74:8080  // http://furkangunduz.online
 
 📋 Features
 
-    ✅ Complete CRUD operations for tasks
+✅ Complete CRUD operations for tasks
 
-    ✅ User authentication and authorization
+✅ User authentication and authorization
 
-    ✅ RESTful API design
+✅ RESTful API design
 
-    ✅ AWS RDS MySQL integration
+✅ AWS RDS MySQL integration
 
-    ✅ Docker containerization
+✅ Docker containerization
 
-    ✅ AWS ECS Fargate deployment
+✅ AWS ECS Fargate deployment
+
