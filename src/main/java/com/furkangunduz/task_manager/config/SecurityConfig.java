@@ -35,7 +35,7 @@ public AuthenticationManager authenticationManager(AuthenticationConfiguration c
 public SecurityFilterChain securityFilterChain(HttpSecurity http) throws Exception {
   http
     .userDetailsService(userDetailsService)
-    .csrf(csrf -> csrf.ignoringRequestMatchers("/logout"))  // BUNU EKLE
+    .csrf(csrf -> csrf.ignoringRequestMatchers("/logout"))  
     .authorizeHttpRequests(auth -> auth
         .requestMatchers("/register", "/login", "/css/**", "/js/**").permitAll()
         .anyRequest().authenticated()
