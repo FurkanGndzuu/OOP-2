@@ -3,7 +3,7 @@ Task Manager API
 A Spring Boot-based task management application deployed on AWS ECS with RDS MySQL database.
 🚀 Live Demo
 
-Production URL: http://51.44.174.74:8080  // http://furkangunduz.online
+Production URL: http://16.16.222.138:8080 // http://furkangunduz.online /domain not avaliable you can only access with ip and port
 
 📋 Features
 
@@ -18,4 +18,5 @@ Production URL: http://51.44.174.74:8080  // http://furkangunduz.online
 ✅ Docker containerization
 
 ✅ AWS ECS Fargate deployment
+
 
