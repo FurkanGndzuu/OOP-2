@@ -16,21 +16,20 @@ public class UserService {
     @Autowired
     private PasswordEncoder passwordEncoder;
     
-   public User registerUser(RegisterRequest request) {
-      if (userRepository.findByUsername(request.getUsername()).isPresent()) {
-        throw new RuntimeException("This username is already in use");
+    public User registerUser(RegisterRequest request) {
+        if (userRepository.findByUsername(request.getUsername()).isPresent()) {
+            throw new RuntimeException("Username already exists");
+        }
+        if (userRepository.findByEmail(request.getEmail()).isPresent()) {
+            throw new RuntimeException("Email already exists");
+        }
+        
+        User user = new User();
+        user.setUsername(request.getUsername());
+        user.setEmail(request.getEmail());
+        user.setPassword(passwordEncoder.encode(request.getPassword()));
+        return userRepository.save(user);
     }
-    
- 
-    if (userRepository.findByEmail(request.getEmail()).isPresent()) {
-        throw new RuntimeException("This email is already in use");
-    }
-    User user = new User();
-    user.setUsername(request.getUsername());
-    user.setEmail(request.getEmail());
-    user.setPassword(passwordEncoder.encode(request.getPassword()));
-    return userRepository.save(user);
-}
     
     public User findByUsername(String username) {
         return userRepository.findByUsername(username).orElse(null);
